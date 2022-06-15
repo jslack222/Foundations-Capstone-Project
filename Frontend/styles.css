@@ -1,3 +1,62 @@
 * {
     font-family: 'Arimo', sans-serif;
 }
+
+#joshicon {
+    margin: 1vh 0vh;
+    height: 10vh;
+    position: relative;
+    display: flex;
+    border-radius: 50%
+}
+
+#iconAndTitle {
+    display: inline
+}
+#iconTitle {
+    display: flex;
+    position: relative; 
+    
+    
+}
+
+body {
+    background-image: linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)),url(/images/the-rock-wallpaper.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    
+}
+
+
+
+header {
+    background-color: rgb(216, 216, 216);
+    width: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* margin: 4vh; */
+}
+
+header * {
+    display: inline;
+    
+}
+
+header li {
+    margin: 40px;
+    font-size: 2vh;
+    
+}
+
+header li a {
+    text-decoration: none;
+    color: black;
+
+
+}
