@@ -26,8 +26,38 @@
             </ul>
         </nav>
     </header>
+        
+        <section id="schedule">
 
+        <h1 id="schedule-heading">Schedule An Appointment</h1>
+        
+        <div id="appointment-type">
+        <label for="appointments">Appointment Type:</label>
+        <select name="appointments" id="appointments">
+            <option value="voiceLessons">Voice Lessons</option>
+            <option value="concerts">Concerts</option>
+        </select>
+        </div>
 
-    
+        <div id="date-input">
+        <label for="date">Choose Your Date</label>
+        <input type="date">
+        </div>
+
+        <div id="name-input">
+        <label for="Name">Name</label>
+        <input type="text">
+        </div>
+
+        <div id="email-input">
+        <label for="email">Email</label>
+        <input type="email">
+        </div>
+        
+        <button id="submit">Make An Appointment</button>
+
+        </section>
+
+    <script src = "./index.js"></script>
 </body>
 </html>
