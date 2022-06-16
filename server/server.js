@@ -3,9 +3,17 @@ const express = require("express");
 const path = require("path");
 const cors = require("cors")
 const app = express();
+const { seed } = require('./controller.js')   
 // const { SERVER_PORT } = process.env
 
 app.use(express.json())
+
+app.use(express.static('images'))
+
+app.use(express.static('Frontend'))
+
+app.post('/seed', seed)
+
 app.use(cors())
 
 app.get('/', (req, res) => {
