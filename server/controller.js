@@ -14,6 +14,36 @@ const sequelize = new Sequelize(CONNECTION_STRING, {
 module.exports = {
 
 
+  getAppt: (req, res) => {
+    sequelize.query(
+      `SELECT * FROM appointments`
+    )
+      .then(dbRes => res.status(200).send(dbRes[0]))
+    .catch((err) => console.log("error showing appointments", err))
+  },
+
+  createAppt: (req, res) => {
+    const { appt_id, appt_type, name, email } = req.body
+    sequelize.query(
+      `INSERT INTO appointments (
+        appt_id,
+        appt_type, 
+        name, 
+        email)
+        VALUES (
+        '${appt_id}', 
+        '${appt_type}',
+        '${name}', 
+        '${email}'
+      )`
+    )
+      .then((dbRes) => {
+        console.log(dbRes)
+        res.status(200).send(dbRes[0])
+      })
+      .catch((err) =>
+      console.log('create appointments function not working', err))
+  },
 
   seed: (req, res) => {
     sequelize.query(

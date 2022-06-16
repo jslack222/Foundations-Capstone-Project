@@ -8,8 +8,6 @@ const { SERVER_PORT } = process.env
 
 app.use(express.json())
 
-app.use(express.static('images'))
-
 app.use(express.static('Frontend'))
 
 app.post('/seed', seed)
