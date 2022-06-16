@@ -4,7 +4,7 @@ const path = require("path");
 const cors = require("cors")
 const app = express();
 const { seed } = require('./controller.js')   
-// const { SERVER_PORT } = process.env
+const { SERVER_PORT } = process.env
 
 app.use(express.json())
 
