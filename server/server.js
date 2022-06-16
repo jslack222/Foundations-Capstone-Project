@@ -13,10 +13,10 @@ app.use(cors())
 // app.post('/seed', seed)
 
 //appointments
-app.post('/appointments', createAppt)
-app.get('/appointments', getAppt)
-app.put('appointments', editAppt)
-app.delete('appointments', deleteAppt)
+// app.post('/appointments', createAppt)
+// app.get('/appointments', getAppt)
+// app.put('appointments', editAppt)
+// app.delete('appointments', deleteAppt)
 
 
 
