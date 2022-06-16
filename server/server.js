@@ -1,6 +1,6 @@
 require('dotenv').config();
 const express = require("express");
-// const path = require("path");
+const path = require("path");
 const cors = require("cors")
 const app = express();
 // const { SERVER_PORT } = process.env
@@ -8,6 +8,17 @@ const app = express();
 app.use(express.json())
 app.use(cors())
 
+app.get('/', (req, res) => {
+    res.sendFile(path.join(__dirname, "../Frontend/index.html"))
+}); 
+
+app.get('/styles', (req, res) => {
+    res.sendFile(path.join(__dirname, "../Frontend/styles.css"))
+})
+
+app.get('/js', (req, res) => {
+    res.sendFile(path.join(__dirname, "../Frontend/index.js"))
+})
 
 //maybe I will need
 // app.post('/seed', seed)
