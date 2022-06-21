@@ -47,14 +47,15 @@ function getAppt() {
     axios.get('http://localhost:5002/appointments/')
         .then(res => {
             res.data.forEach(elem => {
-                let apptCard = `<h3>Your Scheduled!<h3><div class="appt-card">
+                let apptCard = `<h3 id = "title1">Your Scheduled!<h3><div class="appt-card">
                 <h2>Thank you ${elem.name}, we will see you on
                 ${elem.date} for ${elem.type}</h2>
                 <button id= "delete" onclick="deleteCard(${elem["appt_id"]})"><img class="trash" src="/images/delete.png" /></button>
-                </div><style> h2 {background-color: white} h2{font-size: 2vh} 
+                </div><style> h2 {background-color: rgba(53, 206, 255, .5)} h2{font-size: 2vh} 
                 h2 {display: inline-block} h2 {justify-content: center}
-                h2{padding: 4vh 4vh 4vh 4vh} h2 {border-radius: 20px} button img {height: 4vh} h3 {color: white} h2 {color: black} 
-                #delete {background-color: transparent} #delete {border: none} h3 {margin: 4vh 4vh} #delete:hover {cursor:pointer}
+                h2{padding: 4vh 4vh 4vh 4vh} h2 {border-radius: 20px} button img {height: 4vh} h3 {color: white} h2 {color: white} 
+                #delete {background-color: transparent} #delete {border: none} h3 {margin: 4vh 4vh} #delete:hover {cursor:pointer} 
+                .appt-card {display: flex} .appt-card {justify-content: center} h3 {display: flex} h3 {justify-content: center}
                 
                 }
                 ; <style>`;

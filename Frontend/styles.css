@@ -83,10 +83,19 @@ header li a {
 }
 #submit {
     padding: 2vh;
+    margin: 1vh 1vh
 }
 #getAppt {
     padding: 2vh; 
+    margin: 1vh 1vh;
+    background-color: rgba(53, 206, 255,.7);
+    border: white;
+    color: white; 
+    border-radius: 20px
 }
 #getAppt:hover {
+    cursor: pointer;
+}
+#submit:hover {
     cursor: pointer;
 }
