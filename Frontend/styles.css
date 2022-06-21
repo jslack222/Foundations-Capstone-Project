@@ -22,17 +22,18 @@
 
 body {
     margin: 0;
-    background-image: linear-gradient(rgba(255, 255, 255, .80), rgba(255, 255, 255, 0.25)),url(/images/the-rock-wallpaper.jpg);
+    background-image: linear-gradient(rgba(8, 8, 8, 0.8), rgba(255, 255, 255, 0.25)),url(/images/the-rock-wallpaper.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
+    color: white
     
 }
 
 
 
 header {
-    background-color: rgb(216, 216, 216);
+    background-color: rgb(216, 216, 216,.5);
     width: 100%;
     top: 0;
     left: 0;
@@ -57,7 +58,12 @@ header li {
 
 header li a {
     text-decoration: none;
-    color: black;
+    color: white;
+    
+}
+
+header li a:hover{
+    color: rgba(53, 206, 255)
 }
 
 #schedule {
@@ -70,28 +76,37 @@ header li a {
     padding: 3vh;
 }
 #appointment-type {
-    padding: 1vh;
+    padding: 2vh;
+    
 }
 #date-input {
-    padding: 1vh;
+    padding: 2vh;
 }
 #name-input {
-    padding: 1vh;
+    padding: 2vh;
 }
 #email-input {
-    padding: 1vh;
+    padding: 2vh;
 }
 #submit {
     padding: 2vh;
-    margin: 1vh 1vh
+    margin: 3vh 3vh;
+    background-color: rgba(53, 206, 255, .5);
+        border: white;
+        color: white;
+        border-radius: 20px;
+        height: 10vh;
+            font-size: 2vh
 }
 #getAppt {
     padding: 2vh; 
     margin: 1vh 1vh;
-    background-color: rgba(53, 206, 255,.7);
+    background-color: rgba(53, 206, 255,.5);
     border: white;
     color: white; 
-    border-radius: 20px
+    border-radius: 20px;
+    height: 10vh;
+    font-size: 2vh
 }
 #getAppt:hover {
     cursor: pointer;
