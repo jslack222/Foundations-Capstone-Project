@@ -23,26 +23,45 @@ module.exports = {
   },
 
   createAppt: (req, res) => {
-    const { appt_id, appt_type, name, email } = req.body
-    sequelize.query(
-      `INSERT INTO appointments (
-        appt_id,
-        appt_type, 
-        name, 
+    const { type, name, date, email } = req.body
+    sequelize
+      .query(
+        `INSERT INTO appointments (
+        type, 
+        name,
+        date, 
         email)
-        VALUES (
-        '${appt_id}', 
-        '${appt_type}',
-        '${name}', 
+        VALUES ( 
+        '${type}',
+        '${name}',
+        '${date}',
         '${email}'
       )`
-    )
+      )
       .then((dbRes) => {
-        console.log(dbRes)
-        res.status(200).send(dbRes[0])
+        console.log(dbRes);
+        res.status(200).send(dbRes[0]);
       })
       .catch((err) =>
-      console.log('create appointments function not working', err))
+        console.log("create appointments function not working", err)
+      );
+  },
+
+  deleteAppt: (req, res) => {
+    const { id } = req.params; 
+    sequelize
+      .query(
+        `DELET FROM appointments
+      WHERE appt_id = ${+id}; 
+      `
+      )
+      .then((dbRes) => {
+        console.log(dbRes);
+        res.status(200).send(dbRes[0]);
+      })
+      .catch((err) => console.log('delete Appointments function is not working',)
+      );
+      
   },
 
   seed: (req, res) => {
@@ -50,14 +69,15 @@ module.exports = {
       `
         CREATE TABLE appointments (
           appt_id SERIAL PRIMARY KEY, 
-          appt_type VARCHAR NOT NULL,
+          type VARCHAR NOT NULL,
           name VARCHAR (50) NOT NULL, 
+          date VARCHAR (50) NOT NULL,
           email VARCHAR (300) NOT NULL 
         );
         
-        INSERT INTO appointments (appt_type, name, email)
-        VALUES ('Vocal Lessons', 'Jeremy Rider', 'jerry@rider.net'), 
-        ('Vocal Lessons', 'Tom Thumb', 'tbcrazy@yahoo.com' )
+        INSERT INTO appointments (type, name, date, email)
+        VALUES ('Vocal Lessons', 'Jeremy Rider', '12/24/2024', 'jerry@rider.net'), 
+        ('Vocal Lessons', 'Tom Thumb', '01/11/2023', 'tbcrazy@yahoo.com' )
         
         `
     )
