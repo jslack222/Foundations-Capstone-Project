@@ -22,7 +22,7 @@
 
 body {
     margin: 0;
-    background-image: linear-gradient(rgba(8, 8, 8, 0.8), rgba(255, 255, 255, 0.25)),url(/images/the-rock-wallpaper.jpg);
+    background-image: linear-gradient(rgba(8, 8, 8, 0.8), rgba(255, 255, 255, 0.596)),url(/images/the-rock-wallpaper.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
@@ -33,7 +33,7 @@ body {
 
 
 header {
-    background-color: rgb(216, 216, 216,.5);
+    background-color: rgba(151, 151, 151, 0.5);
     width: 100%;
     top: 0;
     left: 0;
@@ -91,7 +91,7 @@ header li a:hover{
 #submit {
     padding: 2vh;
     margin: 3vh 3vh;
-    background-color: rgba(53, 206, 255, .5);
+    background-color: rgba(53, 206, 255, .6);
         border: white;
         color: white;
         border-radius: 20px;
@@ -101,7 +101,7 @@ header li a:hover{
 #getAppt {
     padding: 2vh; 
     margin: 1vh 1vh;
-    background-color: rgba(53, 206, 255,.5);
+    background-color: rgba(53, 206, 255,.6);
     border: white;
     color: white; 
     border-radius: 20px;
@@ -113,4 +113,41 @@ header li a:hover{
 }
 #submit:hover {
     cursor: pointer;
+}
+h4 {
+    display: flex; 
+    justify-content: center;
+    font-size: 5vh
+}
+#spotify1 {
+    display: flex; 
+    justify-content: center;
+}
+#release {
+    font-size: 3vh
+}
+
+#artist {
+    display: flex;
+    justify-content: center;
+    padding: 3vh; 
+    margin: 3vh 3vh 
+}
+#booknow {
+    display: flex; 
+    justify-content: center;
+    
+    
+}
+#bookbtn {
+        background-color: rgba(53, 206, 255, .6);
+        border: white;
+        color: white;
+        border-radius: 20px;
+        height: 7vh;
+        width: 20vh;
+        font-size: 2vh
+}
+#bookbtn:hover {
+    cursor:pointer; 
 }

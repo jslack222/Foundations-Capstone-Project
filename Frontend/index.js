@@ -51,7 +51,7 @@ function getAppt() {
                 <h2>Thank you ${elem.name}, we will see you on
                 ${elem.date} for ${elem.type}</h2>
                 <button id= "delete" onclick="deleteCard(${elem["appt_id"]})"><img class="trash" src="/images/delete.png" /></button>
-                </div><style> h2 {background-color: rgba(53, 206, 255, .5)} h2{font-size: 2vh} 
+                </div><style> h2 {background-color: rgba(53, 206, 255, .6)} h2{font-size: 2vh} 
                 h2 {display: inline-block} h2 {justify-content: center}
                 h2{padding: 4vh 4vh 4vh 4vh} h2 {border-radius: 20px} button img {height: 4vh} h3 {color: white} h2 {color: white} 
                 #delete {background-color: transparent} #delete {border: none} h3 {margin: 4vh 4vh} #delete:hover {cursor:pointer} 
