@@ -51,7 +51,7 @@ module.exports = {
     const { id } = req.params; 
     sequelize
       .query(
-        `DELET FROM appointments
+        `DELETE FROM appointments
       WHERE appt_id = ${+id}; 
       `
       )
