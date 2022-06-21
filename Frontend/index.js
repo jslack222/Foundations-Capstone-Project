@@ -50,16 +50,18 @@ function getAppt() {
                 let apptCard = `<h3>Your Scheduled!<h3><div class="appt-card">
                 <h2>Thank you ${elem.name}, we will see you on
                 ${elem.date} for ${elem.type}</h2>
-                <button id= "delete" onclick="deleteCard(${elem["appt_id"]})"><img src="/images/delete.png" /></button>
+                <button id= "delete" onclick="deleteCard(${elem["appt_id"]})"><img class="trash" src="/images/delete.png" /></button>
                 </div><style> h2 {background-color: white} h2{font-size: 2vh} 
                 h2 {display: inline-block} h2 {justify-content: center}
                 h2{padding: 4vh 4vh 4vh 4vh} h2 {border-radius: 20px} button img {height: 4vh} h3 {color: white} h2 {color: black} 
-                #delete {background-color: transparent} #delete {border: none} h3 {margin: 4vh 4vh} 
+                #delete {background-color: transparent} #delete {border: none} h3 {margin: 4vh 4vh} #delete:hover {cursor:pointer}
+                
                 }
                 ; <style>`;
 
-                apptList.innerHTML += apptCard
-        })
+              apptList.innerHTML += apptCard
+              
+            }) 
     })
 }
 
@@ -68,3 +70,13 @@ function getAppt() {
 
 submitAppt.addEventListener("click", createAppt);
 getApptBtn.addEventListener('click', getAppt)
+document.addEventListener('mouseover', (evt) => {
+  if (evt.target && evt.target.classList == 'trash') {
+    evt.target.src = "/images/redtrash.png"
+  }
+})
+document.addEventListener("mouseout", (evt) => {
+  if (evt.target && evt.target.classList == "trash") {
+    evt.target.src = "/images/delete.png";
+  }
+});

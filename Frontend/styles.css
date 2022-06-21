@@ -87,3 +87,6 @@ header li a {
 #getAppt {
     padding: 2vh; 
 }
+#getAppt:hover {
+    cursor: pointer;
+}

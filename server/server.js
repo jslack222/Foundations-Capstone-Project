@@ -31,7 +31,7 @@ app.get('/js', (req, res) => {
 app.post('/appointments', createAppt)
 app.get('/appointments', getAppt)
 // app.put('appointments', editAppt)
-app.delete('appointments', deleteAppt)
+app.delete(`/appointments/:id`, deleteAppt)
 
 
 
