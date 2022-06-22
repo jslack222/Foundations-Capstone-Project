@@ -29,7 +29,7 @@ function createAppt(evt) {
   };
   console.log(apptObj);
   axios
-    .post("http://localhost:5002/appointments", apptObj)
+    .post("/appointments", apptObj)
       .then(() => {
         nameInput.value = ''
         getAppt()
@@ -38,13 +38,13 @@ function createAppt(evt) {
 }
 function deleteCard(id) {
   axios
-    .delete(`http://localhost:5002/appointments/${id}`)
+    .delete(`/appointments/${id}`)
     .then(() => getAppt())
     .catch((err) => console.log(err));
 }
 function getAppt() {
     apptList.innerHTML = ''
-    axios.get('http://localhost:5002/appointments/')
+    axios.get('/appointments')
         .then(res => {
             res.data.forEach(elem => {
                 let apptCard = `<h3 id = "title1">Your Scheduled!<h3><div class="appt-card">
